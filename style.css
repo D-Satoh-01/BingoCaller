@@ -50,15 +50,14 @@ h1 {
 }
 
 #fullscreenButton {
-  width: 10rem;
-  height: 3rem;
-  padding: 5px 30px;
-  font-size: 20px;
+  width: 7.2rem;
+  height: 2.16rem;
+  padding: 5px 10px;
+  font-size: 14px;
   font-weight: bold;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 20px;
   color: #fff;
-  background-color: rgb(46, 184, 92);
+  background-color: rgb(196, 108, 0);
   border-radius: 5px;
   border: 3px solid #ddd;
   cursor: pointer;
@@ -69,7 +68,7 @@ h1 {
 }
 
 #fullscreenButton:hover {
-  background-color: rgb(37, 147, 74);
+  background-color: rgb(157, 86, 0);
 }
 
 #statusMessage {
