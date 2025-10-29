@@ -1,6 +1,7 @@
 const rangeSelect = document.getElementById("rangeSelect");
 const durationSelect = document.getElementById("durationSelect");
 const rollButton = document.getElementById("rollButton");
+const fullscreenButton = document.getElementById("fullscreenButton");
 const numberDisplay = document.getElementById("numberDisplay");
 const historyList = document.getElementById("historyList");
 const statusMessage = document.getElementById("statusMessage");
@@ -135,6 +136,21 @@ function resetAudio() {
 
 rollButton.addEventListener("click", startRoll);
 rangeSelect.addEventListener("change", resetGame);
+
+// 全画面表示切り替え
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch((err) => {
+      console.error("全画面表示に失敗しました:", err);
+    });
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+fullscreenButton.addEventListener("click", toggleFullscreen);
 
 // スペースキーでもロール開始
 document.addEventListener("keydown", (e) => {
